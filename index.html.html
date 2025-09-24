@@ -46,16 +46,42 @@
     button:hover {
       background: #ff2a00;
     }
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+      display: none;
+    }
   </style>
 </head>
 <body>
   <div class="login-box">
     <h2>Login</h2>
-    <form action="menu.html" method="get">
-      <input type="text" placeholder="Username" required>
-      <input type="password" placeholder="Password" required>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
       <button type="submit">Login</button>
     </form>
+    <p class="error" id="errorMsg">Invalid username or password!</p>
   </div>
+
+  <script>
+    // Hardcoded credentials for demo
+    const validUser = "user";
+    const validPass = "1234";
+
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // Stop form refresh
+
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      if (username === validUser && password === validPass) {
+        window.location.href = "menu.html"; // Redirect on success
+      } else {
+        document.getElementById("errorMsg").style.display = "block";
+      }
+    });
+  </script>
 </body>
 </html>
