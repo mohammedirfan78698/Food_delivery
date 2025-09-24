@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - Food Delivery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fafafa;
+    }
+    header {
+      background: #ff4b2b;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    .menu-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .food-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+    }
+    .food-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .food-card h3 {
+      margin: 10px 0;
+    }
+    .food-card button {
+      padding: 10px;
+      width: 100%;
+      background: #ff4b2b;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .food-card button:hover {
+      background: #ff2a00;
+    }
+    .nav {
+      margin: 10px;
+      text-align: center;
+    }
+    .nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #ff4b2b;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Browse Menu</h1>
+  </header>
+
+  <div class="nav">
+    <a href="menu.html">Menu</a>
+    <a href="cart.html">Cart</a>
+    <a href="login.html">Logout</a>
+  </div>
+
+  <div class="menu-container">
+    <div class="food-card">
+      <img src="https://via.placeholder.com/250x150" alt="Pizza">
+      <h3>Pizza</h3>
+      <p>₹250</p>
+      <button onclick="window.location.href='cart.html'">Add to Cart</button>
+    </div>
+    <div class="food-card">
+      <img src="https://via.placeholder.com/250x150" alt="Burger">
+      <h3>Burger</h3>
+      <p>₹150</p>
+      <button onclick="window.location.href='cart.html'">Add to Cart</button>
+    </div>
+    <div class="food-card">
+      <img src="https://via.placeholder.com/250x150" alt="Pasta">
+      <h3>Pasta</h3>
+      <p>₹200</p>
+      <button onclick="window.location.href='cart.html'">Add to Cart</button>
+    </div>
+  </div>
+</body>
+</html>
